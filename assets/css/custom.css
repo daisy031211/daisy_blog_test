@@ -194,3 +194,17 @@ body,
   margin-bottom: 0 !important;
 }
 
+/* Mobile Navigation - Collapse All Categories */
+@media (max-width: 767px) {
+
+  /* 카테고리가 표시되는 공간을 좁혀 자동 접기 유도 */
+  .greedy-nav .visible-links {
+    max-width: 1px;
+  }
+
+  /* 사이트 제목은 그대로 표시 */
+  .greedy-nav .site-title {
+    flex-shrink: 0;
+  }
+
+}
