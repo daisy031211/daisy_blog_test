@@ -1,8 +1,6 @@
 
 (function () {
   const mobileQuery = window.matchMedia("(max-width: 767px)");
-  let observer;
-  let updating = false;
 
   const menuOrder = [
     "/development/",
@@ -13,8 +11,11 @@
     "/activities/"
   ];
 
+  let observer;
+  let updating = false;
+
   function updateMenu() {
-    if (!mobileQuery.matches || updating) return;
+    if (updating) return;
 
     const nav = document.querySelector(".greedy-nav");
     if (!nav) return;
@@ -28,39 +29,39 @@
     updating = true;
     if (observer) observer.disconnect();
 
-    // 상단에 남은 메뉴를 모두 드롭다운으로 이동
-    Array.from(visible.children)
-      .filter(item =>
-        !item.classList.contains("masthead__menu-item--lg")
-      )
-      .forEach(item => hidden.appendChild(item));
+    // 메뉴 항목을 모두 수집
+    const items = [
+      ...Array.from(visible.children),
+      ...Array.from(hidden.children)
+    ].filter(item =>
+      !item.classList.contains("masthead__menu-item--lg")
+    );
 
-    // 드롭다운 메뉴를 원래 순서대로 정렬
-    const items = Array.from(hidden.children);
+    // navigation.yml의 순서로 정렬
+    function getOrder(item) {
+      const href = item.querySelector("a")?.getAttribute("href") || "";
+      const index = menuOrder.findIndex(path =>
+        href.split("?")[0].endsWith(path)
+      );
+      return index === -1 ? menuOrder.length : index;
+    }
 
-    items.sort((a, b) => {
-      const getOrder = (item) => {
-        const href = item.querySelector("a")?.getAttribute("href") || "";
+    items.sort((a, b) => getOrder(a) - getOrder(b));
 
-        const index = menuOrder.findIndex(path =>
-          href.split("?")[0].endsWith(path)
-        );
+    if (mobileQuery.matches) {
+      // 모바일: 모든 메뉴를 드롭다운으로
+      items.forEach(item => hidden.appendChild(item));
+      toggle.classList.remove("hidden");
+    } else {
+      // PC: 원래 순서로 상단 메뉴에 복구
+      items.forEach(item => visible.appendChild(item));
+    }
 
-        return index === -1 ? menuOrder.length : index;
-      };
-
-      return getOrder(a) - getOrder(b);
-    });
-
-    items.forEach(item => hidden.appendChild(item));
-
-    toggle.classList.remove("hidden");
+    updating = false;
 
     if (observer) {
       observer.observe(visible, { childList: true });
     }
-
-    updating = false;
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -74,6 +75,7 @@
     observer.observe(visible, { childList: true });
 
     updateMenu();
-    window.addEventListener("resize", updateMenu);
+    mobileQuery.addEventListener("change", updateMenu);
   });
 })();
+
