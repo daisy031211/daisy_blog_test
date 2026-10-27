@@ -59,7 +59,7 @@ plugins:
 
 author:
   name   : "Daisy"
-  avatar : ""
+  avatar : "/assets/images/daisy-profile.png"
   bio    : "Security · Development · Research"
   location: "South Korea"
   links:
