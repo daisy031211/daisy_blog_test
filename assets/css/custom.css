@@ -193,15 +193,3 @@ body,
 .sidebar .h-card {
   margin-bottom: 0 !important;
 }
-
-/* 모바일 메뉴: 카테고리 표시 공간 최소화 */
-@media (max-width: 767px) {
-  .greedy-nav .visible-links {
-    flex: 0 1 0 !important;
-    min-width: 0 !important;
-  }
-
-  .greedy-nav .visible-links > li {
-    white-space: nowrap;
-  }
-}
