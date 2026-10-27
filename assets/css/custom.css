@@ -76,3 +76,38 @@ a:hover {
 .page__footer a {
   color: var(--brown);
 }
+
+
+/* Daisy's Blog - Two Column Grid */
+
+@media (min-width: 768px) {
+  .entries-list .grid__item,
+  .entries-grid .grid__item,
+  .archive .grid__item {
+    width: calc(50% - 1em);
+    margin-right: 2%;
+  }
+
+  .archive .grid__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .archive .grid__item:nth-child(2n + 1) {
+    clear: both;
+  }
+}
+
+/* 카드 스타일 */
+.archive .grid__item .archive__item {
+  background: #FFFEFA;
+  border: 1px solid #E9E1D5;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* 배경 */
+html,
+body,
+#main {
+  background: #FFF9EF;
+}
