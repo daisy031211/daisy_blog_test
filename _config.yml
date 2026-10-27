@@ -62,7 +62,7 @@ plugins:
 author:
   name   : "Daisy"
   avatar : "/assets/images/daisy-profile.png"
-  bio    : "Security · Development · Research"
+  bio    : "상명대학교 정보보안공학과 재학 | 관심 분야: 시스템 보안·바이너리 분석 | 목표: IoT 취약점 분석 및 연구"
   email: "lucy03121126@gmail.com"
   links:
     - label: "Discord"
