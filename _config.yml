@@ -61,7 +61,6 @@ author:
   name   : "Daisy"
   avatar : "/assets/images/daisy-profile.png"
   bio    : "Security · Development · Research"
-  location: "South Korea"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -78,9 +77,6 @@ author:
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/"
