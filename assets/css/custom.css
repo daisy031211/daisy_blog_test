@@ -41,15 +41,6 @@ a:hover {
   color: #9C8263;
 }
 
-/* 프로필 */
-.sidebar .author__name {
-  color: var(--brown);
-}
-
-.sidebar .author__bio {
-  color: var(--muted);
-}
-
 /* 게시글 카드 */
 .grid__item .archive__item {
   background: var(--ivory);
@@ -165,30 +156,41 @@ body,
 
 
 
+/* Daisy Profile - Final */
 
-/* Daisy profile spacing */
 .sidebar .author__name {
-  margin-bottom: 0 !important;
+  color: #51463C;
+  margin-bottom: 2px !important;
+}
+
+.sidebar .author__bio,
+.sidebar .author__bio p {
+  color: #85776B;
+  font-size: 13px !important;
+  line-height: 1.8 !important;
+  white-space: pre-line;
 }
 
 .sidebar .author__bio {
-  margin-top: 8px !important;
-  margin-bottom: 8px !important;
-  font-size: 12px !important;
-  line-height: 1.9 !important;
-  color: #85776B;
-  white-space: pre-line;
+  margin: 4px 0 6px !important;
 }
 
 .sidebar .author__bio p {
   margin: 0 !important;
-  font-size: 12px !important;
-  line-height: 1.9 !important;
 }
 
-/* Profile SNS spacing */
+/* SNS 목록 위쪽 간격 */
 .sidebar .author__urls-wrapper {
-  margin-top: 4px !important;
+  margin-top: 0 !important;
 }
 
+.sidebar .author__urls {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 프로필 영역 내부의 기본 여백 */
+.sidebar .h-card {
+  margin-bottom: 0 !important;
+}
 
