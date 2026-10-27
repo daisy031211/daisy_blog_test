@@ -111,3 +111,54 @@ body,
 #main {
   background: #FFF9EF;
 }
+
+
+/* Daisy's Blog - common background */
+html,
+body,
+#main,
+.layout--archive,
+.layout--home {
+  background-color: #FFF9EF;
+}
+
+/* Category archive grid */
+@media (min-width: 768px) {
+  .entries-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .entries-grid .grid__item {
+    width: 100%;
+    margin: 0;
+    float: none;
+    clear: none;
+  }
+}
+
+/* Category post cards */
+.entries-grid .archive__item {
+  background: #FFFEFA;
+  border: 1px solid #E9E1D5;
+  border-radius: 12px;
+  padding: 20px;
+  height: 100%;
+}
+
+.entries-grid .archive__item-title a {
+  color: #51463C;
+}
+
+/* Footer */
+.page__footer {
+  background: #E9E1D5 !important;
+  color: #51463C;
+}
+
+.page__footer a,
+.page__footer-follow,
+.page__footer-copyright {
+  color: #51463C !important;
+}
