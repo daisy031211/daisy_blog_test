@@ -1,0 +1,78 @@
+
+/* Daisy's Blog — Vanilla & Ivory */
+
+:root {
+  --vanilla: #FFF9EF;
+  --ivory: #FFFEFA;
+  --cream: #E9E1D5;
+  --beige: #B7A58B;
+  --brown: #51463C;
+  --muted: #85776B;
+}
+
+/* 전체 배경과 글씨 */
+body {
+  background: var(--vanilla);
+  color: var(--brown);
+}
+
+/* 상단 메뉴 */
+.masthead {
+  background: var(--ivory);
+  border-bottom: 1px solid var(--cream);
+}
+
+.greedy-nav {
+  background: var(--ivory);
+}
+
+.greedy-nav a,
+.site-title {
+  color: var(--brown);
+}
+
+/* 링크 */
+a,
+.archive__item-title a {
+  color: var(--brown);
+}
+
+a:hover {
+  color: #9C8263;
+}
+
+/* 프로필 */
+.sidebar .author__name {
+  color: var(--brown);
+}
+
+.sidebar .author__bio {
+  color: var(--muted);
+}
+
+/* 게시글 카드 */
+.grid__item .archive__item {
+  background: var(--ivory);
+  border: 1px solid var(--cream);
+  border-radius: 12px;
+  padding: 14px;
+  transition: transform 0.2s ease;
+}
+
+.grid__item .archive__item:hover {
+  transform: translateY(-3px);
+}
+
+.archive__item-teaser img {
+  border-radius: 8px;
+}
+
+/* 하단 영역 */
+.page__footer {
+  background: var(--cream);
+  color: var(--brown);
+}
+
+.page__footer a {
+  color: var(--brown);
+}
