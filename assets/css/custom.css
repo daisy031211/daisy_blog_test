@@ -194,17 +194,14 @@ body,
   margin-bottom: 0 !important;
 }
 
-/* Mobile Navigation - Collapse All Categories */
+/* 모바일 메뉴: 카테고리 표시 공간 최소화 */
 @media (max-width: 767px) {
-
-  /* 카테고리가 표시되는 공간을 좁혀 자동 접기 유도 */
   .greedy-nav .visible-links {
-    max-width: 1px;
+    flex: 0 1 0 !important;
+    min-width: 0 !important;
   }
 
-  /* 사이트 제목은 그대로 표시 */
-  .greedy-nav .site-title {
-    flex-shrink: 0;
+  .greedy-nav .visible-links > li {
+    white-space: nowrap;
   }
-
 }
