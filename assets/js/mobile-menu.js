@@ -26,7 +26,7 @@
 
     if (observer) observer.disconnect();
 
-    items.forEach(item => hidden.prepend(item));
+    items.reverse().forEach(item => hidden.prepend(item));
     toggle.classList.remove("hidden");
 
     if (observer) {
