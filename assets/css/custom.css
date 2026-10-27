@@ -193,14 +193,3 @@ body,
 .sidebar .h-card {
   margin-bottom: 0 !important;
 }
-
-/* 모바일에서는 모든 카테고리를 햄버거 메뉴에 표시 */
-@media (max-width: 767px) {
-  .greedy-nav .visible-links {
-    display: none !important;
-  }
-
-  .greedy-nav .hidden-links {
-    display: block;
-  }
-}
