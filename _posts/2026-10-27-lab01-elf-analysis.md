@@ -8,6 +8,8 @@ tags:
   - ELF
   - Binary Analysis
 excerpt: "C 프로그램을 컴파일하고 ELF 파일의 구조를 분석하는 기초 실습"
+header:
+  teaser: /assets/images/elf-thumbnail.png
 ---
 
 ## 1. 실습 목적
