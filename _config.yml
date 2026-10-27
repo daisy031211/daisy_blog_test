@@ -64,7 +64,7 @@ author:
   email: "lucy03121126@gmail.com"
   links:
     - label: "Discord"
-      icon: "fas fa-fw fa-discord"
+      icon: "fab fa-discord"
       url: "https://discord.com/users/daisy1211._."
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
