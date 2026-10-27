@@ -167,14 +167,15 @@ body,
 /* Profile bio */
 .sidebar .author__bio {
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #85776B;
   white-space: pre-line;
+  margin-bottom: 12px;
 }
 
 .sidebar .author__bio p {
   font-size: inherit;
   line-height: inherit;
-  margin: 0 0 8px;
+  margin: 0;
 }
 
