@@ -163,9 +163,18 @@ body,
   color: #51463C !important;
 }
 
+
 /* Profile bio */
 .sidebar .author__bio {
-  white-space: pre-line;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.5;
   color: #85776B;
+  white-space: pre-line;
 }
+
+.sidebar .author__bio p {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0 0 8px;
+}
+
