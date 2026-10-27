@@ -165,25 +165,30 @@ body,
 
 
 
-/* Profile bio */
+
+/* Daisy profile spacing */
+.sidebar .author__name {
+  margin-bottom: 0 !important;
+}
+
 .sidebar .author__bio {
-  font-size: 12px;
-  line-height: 2;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  font-size: 12px !important;
+  line-height: 1.9 !important;
   color: #85776B;
   white-space: pre-line;
-  margin-top: 4px;
-  margin-bottom: 12px;
 }
 
 .sidebar .author__bio p {
-  font-size: inherit;
-  line-height: inherit;
-  margin: 0;
+  margin: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.9 !important;
 }
 
-/* Daisy 이름과 자기소개 사이 간격 */
-.sidebar .author__name {
-  margin-bottom: 4px;
+/* Profile SNS spacing */
+.sidebar .author__urls-wrapper {
+  margin-top: 4px !important;
 }
 
 
